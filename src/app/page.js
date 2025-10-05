@@ -1,103 +1,224 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1496180727794-817822f65950?auto=format&fit=crop&w=1920&q=80')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+      }}
+    >
+      <main
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(255,255,255,0.97))",
+          color: "#1e293b",
+          fontFamily: "'Poppins', sans-serif",
+        }}
+      >
+        {/* HERO SECTION */}
+        <section
+          style={{
+            padding: "100px 20px",
+            textAlign: "center",
+            color: "white",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "3.2rem",
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: "700",
+              lineHeight: "1.2",
+            }}
+          >
+            Discover the Power of <br />
+            <span style={{ color: "#fbbf24" }}>Language</span> &{" "}
+            <span style={{ color: "#fcd34d" }}>Literature</span>
+          </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p
+            style={{
+              fontSize: "1.2rem",
+              maxWidth: "700px",
+              margin: "20px auto",
+              color: "#e2e8f0",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Welcome to the world of{" "}
+            <b>Mr. Walter Simuyu</b> — an educator and thinker who transforms
+            literature into a journey of voice, vision, and soul.
+          </p>
+
+          <div
+            style={{
+              marginTop: "30px",
+              display: "flex",
+              gap: "16px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
           >
-            Read our docs
+            <a
+              href="/about"
+              style={{
+                background: "#fbbf24",
+                color: "#1e293b",
+                padding: "12px 28px",
+                borderRadius: "40px",
+                fontWeight: "600",
+                transition: "0.3s",
+                textDecoration: "none",
+              }}
+              onMouseOver={(e) => (e.target.style.background = "#fff")}
+              onMouseOut={(e) => (e.target.style.background = "#fbbf24")}
+            >
+              Learn More
+            </a>
+
+            <a
+              href="/blog"
+              style={{
+                background: "transparent",
+                border: "2px solid #fbbf24",
+                color: "#fbbf24",
+                padding: "12px 28px",
+                borderRadius: "40px",
+                fontWeight: "600",
+                textDecoration: "none",
+                transition: "0.3s",
+              }}
+              onMouseOver={(e) => {
+                e.target.style.background = "#fbbf24";
+                e.target.style.color = "#1e293b";
+              }}
+              onMouseOut={(e) => {
+                e.target.style.background = "transparent";
+                e.target.style.color = "#fbbf24";
+              }}
+            >
+              Read Blog
+            </a>
+          </div>
+        </section>
+
+        {/* FEATURED SECTION */}
+        <section style={{ padding: "80px 20px", background: "#ffffff" }}>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "2.5rem",
+              textAlign: "center",
+              marginBottom: "40px",
+              color: "#1e293b",
+            }}
+          >
+            Featured Works
+          </h2>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "24px",
+              maxWidth: "1000px",
+              margin: "0 auto",
+            }}
+          >
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                style={{
+                  background: "linear-gradient(145deg, #f8fafc, #fff)",
+                  borderRadius: "16px",
+                  boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                  padding: "24px",
+                  transition: "transform 0.3s ease",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "translateY(-6px)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "translateY(0)")
+                }
+              >
+                <h3
+                  style={{
+                    fontSize: "1.3rem",
+                    fontWeight: "600",
+                    marginBottom: "10px",
+                  }}
+                >
+                  The Art of Expression {i}
+                </h3>
+                <p style={{ color: "#475569", marginBottom: "14px" }}>
+                  A deep reflection on how words shape our world and mirror our
+                  humanity.
+                </p>
+                <a
+                  href="/blog"
+                  style={{
+                    color: "#b45309",
+                    fontWeight: "600",
+                    textDecoration: "none",
+                  }}
+                >
+                  Read More →
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* PHILOSOPHY SECTION */}
+        <section
+          style={{
+            background: "linear-gradient(120deg, #1e293b, #334155)",
+            color: "white",
+            padding: "80px 20px",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "2.5rem",
+              marginBottom: "20px",
+            }}
+          >
+            His Teaching Philosophy
+          </h2>
+          <p
+            style={{
+              maxWidth: "800px",
+              margin: "0 auto 30px",
+              lineHeight: "1.7",
+              fontSize: "1.1rem",
+              color: "#e2e8f0",
+            }}
+          >
+            “Literature is a mirror of life — and education, the art of polishing
+            that mirror. I teach to awaken minds, not to fill them.”
+          </p>
+          <a
+            href="/about"
+            style={{
+              background: "#fbbf24",
+              color: "#1e293b",
+              padding: "12px 30px",
+              borderRadius: "40px",
+              textDecoration: "none",
+              fontWeight: "600",
+            }}
+          >
+            Explore More
           </a>
-        </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
