@@ -39,7 +39,7 @@ export default function Contact() {
             ✉️ Send Email
           </a>
           <a
-            href="https://wa.me/254700000000"
+            href="https://wa.me/254769209046"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn"
