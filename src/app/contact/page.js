@@ -35,7 +35,7 @@ export default function Contact() {
         </p>
 
         <div className="buttons">
-          <a href="mailto:waltersimuyu@example.com" className="email-btn">
+          <a href="mailto:wsimiyu200@gmail.com" className="email-btn">
             ✉️ Send Email
           </a>
           <a
