@@ -22,6 +22,7 @@ export default function About() {
       style={{
         backgroundImage:
           "linear-gradient(rgba(255,255,248,0.97), rgba(255,255,250,0.97))",
+        backgroundSize: "cover",
         borderRadius: "22px",
         boxShadow: "0 10px 35px rgba(0,0,0,0.1)",
         margin: "60px auto",
@@ -59,61 +60,50 @@ export default function About() {
         About Mr. Walter Simuyu
       </h2>
 
-      {/* MAIN ABOUT CONTAINER */}
-      <div
-        className="fade-in"
-        style={{
-          background: "rgba(255,255,255,0.92)",
-          borderRadius: "18px",
-          padding: "40px 30px",
-          border: "1px solid #e7dec9",
-          boxShadow: "0 6px 25px rgba(0,0,0,0.06)",
-        }}
-      >
-        <p style={pStyle}>
-          Mr. Walter Simuyu is a distinguished teacher of English and Literature,
-          celebrated for over a decade of inspiring minds through the power of
-          words. His teaching goes beyond grammar and interpretation — it’s an
-          invitation to think deeply, feel profoundly, and speak with conviction.
-        </p>
+      {/* PARAGRAPHS */}
+      <p className="fade-in" style={pStyle}>
+        Mr. Walter Simuyu is a distinguished teacher of English and Literature,
+        celebrated for over a decade of inspiring minds through the power of
+        words. His teaching goes beyond grammar and interpretation — it’s an
+        invitation to think deeply, feel profoundly, and speak with conviction.
+      </p>
 
-        <p style={pStyle}>
-          Known for his eloquence and engaging storytelling, he transforms
-          literature from mere text into a living conversation. His sessions are
-          not just lessons, but experiences — connecting language, culture, and
-          emotion in a way that leaves a lasting impact.
-        </p>
+      <p className="fade-in" style={pStyle}>
+        Known for his eloquence and engaging storytelling, he transforms
+        literature from mere text into a living conversation. His sessions are
+        not just lessons, but experiences — connecting language, culture, and
+        emotion in a way that leaves a lasting impact.
+      </p>
 
-        <p style={pStyle}>
-          Beyond the classroom, Walter is a reader, writer, and mentor who sees
-          language as a bridge — one that connects people, ideas, and
-          generations. His philosophy is simple yet profound:
-          <span
-            style={{
-              display: "block",
-              marginTop: "15px",
-              color: "#b87a48",
-              fontStyle: "italic",
-            }}
-          >
-            “Every great reader becomes, in time, a better thinker and a kinder
-            speaker.”
-          </span>
-        </p>
+      <p className="fade-in" style={pStyle}>
+        Beyond the classroom, Walter is a reader, writer, and mentor who sees
+        language as a bridge — one that connects people, ideas, and
+        generations. His philosophy is simple yet profound:
+        <span
+          style={{
+            display: "block",
+            marginTop: "15px",
+            color: "#b87a48",
+            fontStyle: "italic",
+          }}
+        >
+          “Every great reader becomes, in time, a better thinker and a kinder
+          speaker.”
+        </span>
+      </p>
 
-        <p style={pStyle}>
-          Through this platform, he shares reflections, insights, and thought
-          pieces that celebrate the art of expression and the timeless beauty of
-          words.
-        </p>
-      </div>
+      <p className="fade-in" style={pStyle}>
+        Through this platform, he shares reflections, insights, and thought
+        pieces that celebrate the art of expression and the timeless beauty of
+        words.
+      </p>
 
       {/* TRIPS & SPORTS SECTION */}
       <div
         className="fade-in"
         style={{
           marginTop: "60px",
-          background: "rgba(255, 250, 240, 0.96)",
+          background: "rgba(255, 250, 240, 0.95)",
           borderRadius: "18px",
           padding: "45px 30px",
           border: "1px solid #e1d3b5",
@@ -143,7 +133,7 @@ export default function About() {
           disciplined, and inspired.
         </p>
 
-        {/* Images Row */}
+        {/* Optional Illustrations */}
         <div
           style={{
             display: "flex",
@@ -153,20 +143,20 @@ export default function About() {
             marginTop: "25px",
           }}
         >
-          <div style={{ width: "220px", height: "140px", position: "relative" }}>
+          <div style={{ width: "200px", height: "130px", position: "relative" }}>
             <Image
               src="/images/travel.jpg"
               alt="Travel Moments"
               fill
-              style={{ borderRadius: "14px", objectFit: "cover" }}
+              style={{ borderRadius: "12px", objectFit: "cover" }}
             />
           </div>
-          <div style={{ width: "220px", height: "140px", position: "relative" }}>
+          <div style={{ width: "200px", height: "130px", position: "relative" }}>
             <Image
               src="/images/sports.jpg"
               alt="Sports and Recreation"
               fill
-              style={{ borderRadius: "14px", objectFit: "cover" }}
+              style={{ borderRadius: "12px", objectFit: "cover" }}
             />
           </div>
         </div>
@@ -177,11 +167,6 @@ export default function About() {
         className="fade-in"
         style={{
           marginTop: "70px",
-          background: "rgba(255,255,255,0.92)",
-          borderRadius: "18px",
-          padding: "40px 25px",
-          border: "1px solid #e9dfc7",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
@@ -208,7 +193,6 @@ export default function About() {
               fontStyle: "italic",
               color: "#b87a48",
               fontSize: "1.2rem",
-              marginBottom: "8px",
             }}
           >
             “Teaching is not the filling of a vessel, but the lighting of a
@@ -216,6 +200,7 @@ export default function About() {
           </p>
           <p
             style={{
+              marginTop: "10px",
               fontFamily: "'Times New Roman', serif",
               fontSize: "1.3rem",
               color: "#2a1e10",
