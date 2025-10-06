@@ -1,106 +1,239 @@
 "use client";
-import { motion } from "framer-motion";
+
+import { useEffect } from "react";
+import Image from "next/image";
 
 export default function About() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.2 }
+    );
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <section
-      className="max-w-5xl mx-auto py-20 px-6 text-primary"
       style={{
-        background: "linear-gradient(to bottom, #fffef5 0%, #ffffff 100%)",
-        borderRadius: "20px",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.05)",
+        backgroundImage:
+          "linear-gradient(rgba(255,255,248,0.97), rgba(255,255,250,0.97))",
+        backgroundSize: "cover",
+        borderRadius: "22px",
+        boxShadow: "0 10px 35px rgba(0,0,0,0.1)",
+        margin: "60px auto",
+        padding: "70px 30px",
+        maxWidth: "1100px",
+        fontFamily: "'Georgia', serif",
+        color: "#2a1e10",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      {/* HERO IMAGE */}
-      <motion.div
-        className="relative mb-12 overflow-hidden rounded-2xl shadow-md"
-        whileHover={{ scale: 1.03 }}
-        transition={{ duration: 0.4 }}
-      >
-        <img
-          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
-          alt="Mr. Walter Simuyu teaching literature"
-          className="w-full object-cover h-80 brightness-90"
+      {/* Decorative Background Image */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <Image
+          src="/images/about-bg.jpg"
+          alt="Background"
+          fill
+          style={{ objectFit: "cover", opacity: 0.25 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-      </motion.div>
+      </div>
 
-      {/* ABOUT CARD */}
-      <motion.div
-        className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-10"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+      {/* HEADER */}
+      <h2
+        className="fade-in"
+        style={{
+          fontSize: "2.8rem",
+          borderLeft: "6px solid #b87a48",
+          paddingLeft: "14px",
+          marginBottom: "35px",
+          fontWeight: "600",
+          color: "#2b1d0e",
+          textShadow: "1px 1px 0 #d9c9a6",
+        }}
       >
-        <h2 className="text-4xl font-serif mb-6 border-l-4 border-secondary pl-4">
-          About Mr. Walter Simuyu
-        </h2>
+        About Mr. Walter Simuyu
+      </h2>
 
-        <p className="text-lg leading-relaxed mb-6 text-gray-700">
-          Mr. Walter Simuyu is a distinguished teacher of English and Literature,
-          celebrated for over a decade of shaping young minds through the power of
-          words. His teaching transcends grammar and interpretation — it’s an
-          invitation to think deeply, feel profoundly, and express with purpose.
-        </p>
+      {/* PARAGRAPHS */}
+      <p className="fade-in" style={pStyle}>
+        Mr. Walter Simuyu is a distinguished teacher of English and Literature,
+        celebrated for over a decade of inspiring minds through the power of
+        words. His teaching goes beyond grammar and interpretation — it’s an
+        invitation to think deeply, feel profoundly, and speak with conviction.
+      </p>
 
-        <p className="text-lg leading-relaxed mb-6 text-gray-700">
-          Known for his eloquence and storytelling, he transforms literature into
-          a living dialogue — one that connects emotion, culture, and intellect.
-          His students describe his lessons as journeys through imagination and
-          human experience.
-        </p>
+      <p className="fade-in" style={pStyle}>
+        Known for his eloquence and engaging storytelling, he transforms
+        literature from mere text into a living conversation. His sessions are
+        not just lessons, but experiences — connecting language, culture, and
+        emotion in a way that leaves a lasting impact.
+      </p>
 
-        <p className="text-lg leading-relaxed mb-6 text-gray-700">
-          Beyond the classroom, Mr. Simuyu is a devoted reader, writer, and
-          mentor. He believes that language is not merely a subject, but a bridge —
-          a way to understand both ourselves and others.
-          <span className="block italic mt-3 text-secondary text-lg font-medium">
-            “Every great reader becomes, in time, a better thinker and a kinder
-            speaker.”
-          </span>
-        </p>
+      <p className="fade-in" style={pStyle}>
+        Beyond the classroom, Walter is a reader, writer, and mentor who sees
+        language as a bridge — one that connects people, ideas, and
+        generations. His philosophy is simple yet profound:
+        <span
+          style={{
+            display: "block",
+            marginTop: "15px",
+            color: "#b87a48",
+            fontStyle: "italic",
+          }}
+        >
+          “Every great reader becomes, in time, a better thinker and a kinder
+          speaker.”
+        </span>
+      </p>
 
-        <p className="text-lg leading-relaxed text-gray-700">
-          Through this platform, he shares reflections, literary insights, and
-          thought pieces that celebrate the beauty of words and the art of human
-          connection.
-        </p>
-      </motion.div>
+      <p className="fade-in" style={pStyle}>
+        Through this platform, he shares reflections, insights, and thought
+        pieces that celebrate the art of expression and the timeless beauty of
+        words.
+      </p>
 
-      {/* TRIPS & SPORTS CARD */}
-      <motion.div
-        className="bg-gradient-to-r from-secondary/10 via-white to-transparent p-8 rounded-2xl shadow-sm border border-gray-100"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+      {/* TRIPS & SPORTS SECTION */}
+      <div
+        className="fade-in"
+        style={{
+          marginTop: "60px",
+          background: "rgba(255, 250, 240, 0.95)",
+          borderRadius: "18px",
+          padding: "45px 30px",
+          border: "1px solid #e1d3b5",
+          boxShadow: "0 4px 18px rgba(0,0,0,0.06)",
+        }}
       >
-        <h3 className="text-3xl font-serif mb-6 border-l-4 border-secondary pl-3">
+        <h3
+          style={{
+            fontSize: "1.9rem",
+            marginBottom: "18px",
+            color: "#3a2d1b",
+            fontWeight: "600",
+          }}
+        >
           Trips & Sports
         </h3>
-
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">
-          Outside academics, Walter loves exploring new places and connecting with
-          nature. He often leads learning adventures where students experience
-          literature and history coming alive through cultural visits and discovery.
+        <p style={pStyle}>
+          Walter loves exploring new places and discovering Kenya’s natural and
+          cultural beauty. Traveling offers him moments of reflection and fresh
+          inspiration — each journey a chance to connect with new stories,
+          landscapes, and perspectives.
+        </p>
+        <p style={pStyle}>
+          He’s also passionate about sports and outdoor activity. Whether it’s
+          football, hiking, or long-distance running, he finds joy in movement,
+          seeing it as both meditation and motivation — a way to stay balanced,
+          disciplined, and inspired.
         </p>
 
-        <p className="text-lg text-gray-700 leading-relaxed">
-          He is equally passionate about sports, often mentoring learners on teamwork
-          and discipline both on and off the field. His favorite activities include
-          football, hiking, and cross-country runs — all of which he believes nurture
-          resilience and a sense of community.
-        </p>
-      </motion.div>
+        {/* Optional Illustrations */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "20px",
+            marginTop: "25px",
+          }}
+        >
+          <div style={{ width: "200px", height: "130px", position: "relative" }}>
+            <Image
+              src="/images/travel.jpg"
+              alt="Travel Moments"
+              fill
+              style={{ borderRadius: "12px", objectFit: "cover" }}
+            />
+          </div>
+          <div style={{ width: "200px", height: "130px", position: "relative" }}>
+            <Image
+              src="/images/sports.jpg"
+              alt="Sports and Recreation"
+              fill
+              style={{ borderRadius: "12px", objectFit: "cover" }}
+            />
+          </div>
+        </div>
+      </div>
 
-      {/* SIGNATURE */}
-      <motion.div
-        className="text-right italic text-secondary font-medium text-lg mt-10"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
+      {/* PORTRAIT SECTION */}
+      <div
+        className="fade-in"
+        style={{
+          marginTop: "70px",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: "30px",
+          justifyContent: "center",
+        }}
       >
-        — Mr. Walter Simuyu
-      </motion.div>
+        <div style={{ width: "160px", height: "160px", position: "relative" }}>
+          <Image
+            src="/images/portrait.jpg"
+            alt="Mr. Walter Simuyu portrait"
+            fill
+            style={{
+              borderRadius: "50%",
+              objectFit: "cover",
+              transition: "all 0.4s ease",
+            }}
+            className="portrait-img"
+          />
+        </div>
+        <div>
+          <p
+            style={{
+              fontStyle: "italic",
+              color: "#b87a48",
+              fontSize: "1.2rem",
+            }}
+          >
+            “Teaching is not the filling of a vessel, but the lighting of a
+            flame.”
+          </p>
+          <p
+            style={{
+              marginTop: "10px",
+              fontFamily: "'Times New Roman', serif",
+              fontSize: "1.3rem",
+              color: "#2a1e10",
+            }}
+          >
+            — Mr. Walter Simuyu
+          </p>
+        </div>
+      </div>
+
+      {/* ANIMATION STYLES */}
+      <style jsx>{`
+        .fade-in {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+        .fade-in.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .portrait-img:hover {
+          transform: scale(1.05);
+        }
+      `}</style>
     </section>
   );
 }
+
+const pStyle = {
+  fontSize: "1.1rem",
+  lineHeight: "1.8",
+  marginBottom: "24px",
+  color: "#3a2d1b",
+  textAlign: "justify",
+};
