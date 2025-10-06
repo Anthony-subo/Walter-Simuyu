@@ -82,7 +82,14 @@ export default function About() {
         who believes that language is not just a subject to be studied but a
         bridge to understanding ourselves and others. His philosophy is simple
         yet profound:
-        <span style={{ display: "block", marginTop: "15px", color: "#b87a48", fontStyle: "italic" }}>
+        <span
+          style={{
+            display: "block",
+            marginTop: "15px",
+            color: "#b87a48",
+            fontStyle: "italic",
+          }}
+        >
           “Every great reader becomes, in time, a better thinker and a kinder
           speaker.”
         </span>
@@ -125,6 +132,70 @@ export default function About() {
         </p>
       </div>
 
+      {/* NEW SECTION: TRIPS & SPORTS */}
+      <div
+        className="fade-in"
+        style={{
+          marginTop: "50px",
+          background: "rgba(255, 250, 240, 0.95)",
+          borderRadius: "18px",
+          padding: "40px 30px",
+          border: "1px solid #e1d3b5",
+          boxShadow: "0 4px 15px rgba(0,0,0,0.05)",
+        }}
+      >
+        <h3
+          style={{
+            fontSize: "1.8rem",
+            marginBottom: "14px",
+            color: "#3a2d1b",
+            fontWeight: "600",
+          }}
+        >
+          Trips & Sports
+        </h3>
+        <p style={pStyle}>
+          Outside the classroom, Mr. Simuyu finds great joy in organizing school
+          trips and cultural excursions, where students can connect what they
+          learn in books to the real world. These experiences spark curiosity,
+          teamwork, and appreciation for Kenya’s rich heritage.
+        </p>
+        <p style={pStyle}>
+          A passionate sports enthusiast, he actively encourages learners to
+          take part in games and physical fitness. Whether it’s football,
+          athletics, or hiking, Mr. Simuyu believes that sports build character,
+          discipline, and unity — values just as important as academic success.
+        </p>
+
+        {/* Optional illustrative images */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "20px",
+            marginTop: "25px",
+          }}
+        >
+          <div style={{ width: "200px", height: "130px", position: "relative" }}>
+            <Image
+              src="/images/trip.jpg"
+              alt="Educational Trip"
+              fill
+              style={{ borderRadius: "12px", objectFit: "cover" }}
+            />
+          </div>
+          <div style={{ width: "200px", height: "130px", position: "relative" }}>
+            <Image
+              src="/images/sports.jpg"
+              alt="Sports Day"
+              fill
+              style={{ borderRadius: "12px", objectFit: "cover" }}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* PORTRAIT SECTION */}
       <div
         className="fade-in"
@@ -151,7 +222,13 @@ export default function About() {
           />
         </div>
         <div>
-          <p style={{ fontStyle: "italic", color: "#b87a48", fontSize: "1.2rem" }}>
+          <p
+            style={{
+              fontStyle: "italic",
+              color: "#b87a48",
+              fontSize: "1.2rem",
+            }}
+          >
             “Teaching is not the filling of a vessel, but the lighting of a
             flame.”
           </p>
