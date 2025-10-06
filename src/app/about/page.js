@@ -1,48 +1,29 @@
 "use client";
-
-import { useEffect } from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.2 }
-    );
-    elements.forEach((el) => observer.observe(el));
-  }, []);
-
   return (
     <section
+      className="max-w-5xl mx-auto py-24 px-6 text-primary"
       style={{
-        backgroundImage:
-          "linear-gradient(rgba(255,255,248,0.97), rgba(255,255,250,0.97))",
-        backgroundSize: "cover",
-        borderRadius: "22px",
-        boxShadow: "0 10px 35px rgba(0,0,0,0.1)",
-        margin: "60px auto",
-        padding: "70px 30px",
-        maxWidth: "1100px",
-        fontFamily: "'Georgia', serif",
-        color: "#2a1e10",
-        position: "relative",
-        overflow: "hidden",
+        background: "linear-gradient(to bottom, #fffef5 0%, #ffffff 100%)",
+        borderRadius: "20px",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.05)",
       }}
     >
-      {/* Decorative Background Image */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
-        <Image
-          src="/images/about-bg.jpg"
-          alt="Background"
-          fill
-          style={{ objectFit: "cover", opacity: 0.25 }}
+      {/* HERO IMAGE */}
+      <motion.div
+        className="relative mb-16 overflow-hidden rounded-2xl shadow-md"
+        whileHover={{ scale: 1.03 }}
+        transition={{ duration: 0.4 }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
+          alt="Mr. Walter Simuyu teaching literature"
+          className="w-full object-cover h-80 brightness-90"
         />
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      </motion.div>
 
       {/* HEADER */}
       <h2
