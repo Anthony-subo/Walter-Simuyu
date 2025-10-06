@@ -179,7 +179,7 @@ export default function About() {
         >
           <div style={{ width: "200px", height: "130px", position: "relative" }}>
             <Image
-              src="/images/trip.jpg"
+              src="/images/portrait.jpg"
               alt="Educational Trip"
               fill
               style={{ borderRadius: "12px", objectFit: "cover" }}
@@ -187,7 +187,7 @@ export default function About() {
           </div>
           <div style={{ width: "200px", height: "130px", position: "relative" }}>
             <Image
-              src="/images/sports.jpg"
+              src="/images/portrait.jpg"
               alt="Sports Day"
               fill
               style={{ borderRadius: "12px", objectFit: "cover" }}
