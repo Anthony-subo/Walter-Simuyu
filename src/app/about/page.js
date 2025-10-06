@@ -86,9 +86,35 @@ export default function About() {
         connection.
       </motion.p>
 
+      {/* NEW SECTION: TRIPS & SPORTS */}
+      <motion.div
+        className="mt-16 bg-gradient-to-r from-secondary/10 to-transparent p-6 rounded-2xl shadow-sm"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h3 className="text-3xl font-serif mb-6 border-l-4 border-secondary pl-3">
+          Trips & Sports
+        </h3>
+
+        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          Outside academics, Mr. Simuyu finds joy in exploring new places and
+          connecting with nature. He frequently organizes educational trips,
+          where students experience literature and history come alive through
+          cultural visits and outdoor learning.
+        </p>
+
+        <p className="text-lg text-gray-700 leading-relaxed">
+          He is also passionate about sports, often seen mentoring learners on
+          teamwork and discipline both on and off the field. His favorite
+          activities include football, hiking, and cross-country runs — all of
+          which he believes nurture resilience and a sense of community.
+        </p>
+      </motion.div>
+
       {/* SIGNATURE */}
       <motion.div
-        className="text-right italic text-secondary font-medium text-lg"
+        className="text-right italic text-secondary font-medium text-lg mt-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
