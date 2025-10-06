@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section
-      className="max-w-5xl mx-auto py-20 px-6 text-primary"
+      className="max-w-5xl mx-auto py-24 px-6 text-primary"
       style={{
         background: "linear-gradient(to bottom, #fffef5 0%, #ffffff 100%)",
         borderRadius: "20px",
@@ -13,7 +13,7 @@ export default function About() {
     >
       {/* HERO IMAGE */}
       <motion.div
-        className="relative mb-12 overflow-hidden rounded-2xl shadow-md"
+        className="relative mb-16 overflow-hidden rounded-2xl shadow-md"
         whileHover={{ scale: 1.03 }}
         transition={{ duration: 0.4 }}
       >
@@ -26,69 +26,71 @@ export default function About() {
       </motion.div>
 
       {/* ABOUT CONTENT */}
-      <motion.h2
-        className="text-4xl font-serif mb-8 border-l-4 border-secondary pl-4"
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        About Mr. Walter Simuyu
-      </motion.h2>
+      <div className="max-w-3xl mx-auto">
+        <motion.h2
+          className="text-4xl font-serif mb-10 border-l-4 border-secondary pl-4"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          About Mr. Walter Simuyu
+        </motion.h2>
 
-      <motion.p
-        className="text-lg leading-relaxed mb-6 text-gray-700"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.1 }}
-      >
-        Mr. Walter Simuyu is a distinguished teacher of English and Literature,
-        celebrated for over a decade of shaping young minds through the power of
-        words. His teaching transcends grammar and interpretation — it’s an
-        invitation to think deeply, feel profoundly, and express with purpose.
-      </motion.p>
+        <motion.p
+          className="text-lg leading-relaxed mb-8 text-gray-700"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+        >
+          Mr. Walter Simuyu is a distinguished teacher of English and Literature,
+          celebrated for over a decade of shaping minds through the power of
+          words. His teaching transcends grammar and interpretation — it’s an
+          invitation to think deeply, feel profoundly, and express with purpose.
+        </motion.p>
 
-      <motion.p
-        className="text-lg leading-relaxed mb-6 text-gray-700"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        Known for his eloquence and storytelling, he transforms literature into
-        a living dialogue — one that connects emotion, culture, and intellect.
-        His students describe his lessons as journeys through imagination and
-        human experience.
-      </motion.p>
+        <motion.p
+          className="text-lg leading-relaxed mb-8 text-gray-700"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Known for his eloquence and storytelling, he transforms literature into
+          a living dialogue — one that connects emotion, culture, and intellect.
+          His students describe his lessons as journeys through imagination and
+          the human experience.
+        </motion.p>
 
-      <motion.p
-        className="text-lg leading-relaxed mb-6 text-gray-700"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        Beyond the classroom, Mr. Simuyu is a devoted reader, writer, and
-        mentor. He believes that language is not merely a subject, but a bridge
-        — a way to understand both ourselves and others. His philosophy is
-        simple yet profound:
-        <span className="block italic mt-3 text-secondary text-lg font-medium">
-          “Every great reader becomes, in time, a better thinker and a kinder
-          speaker.”
-        </span>
-      </motion.p>
+        <motion.p
+          className="text-lg leading-relaxed mb-8 text-gray-700"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          Beyond the classroom, Mr. Simuyu is a devoted reader, writer, and
+          mentor. He believes that language is not merely a subject, but a bridge
+          — a way to understand both ourselves and others. His philosophy is
+          simple yet profound:
+          <span className="block italic mt-4 text-secondary text-lg font-medium">
+            “Every great reader becomes, in time, a better thinker and a kinder
+            speaker.”
+          </span>
+        </motion.p>
 
-      <motion.p
-        className="text-lg leading-relaxed mb-10 text-gray-700"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
-        Through this platform, he shares reflections, literary insights, and
-        thought pieces that celebrate the beauty of words and the art of human
-        connection.
-      </motion.p>
+        <motion.p
+          className="text-lg leading-relaxed mb-12 text-gray-700"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Through this platform, he shares reflections, literary insights, and
+          thought pieces that celebrate the beauty of words and the art of human
+          connection.
+        </motion.p>
+      </div>
 
-      {/* NEW SECTION: TRIPS & SPORTS */}
+      {/* TRIPS & SPORTS */}
       <motion.div
-        className="mt-16 bg-gradient-to-r from-secondary/10 to-transparent p-6 rounded-2xl shadow-sm"
+        className="mt-20 bg-gradient-to-r from-secondary/10 to-transparent p-8 rounded-2xl shadow-sm max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -97,24 +99,24 @@ export default function About() {
           Trips & Sports
         </h3>
 
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">
-          Outside academics, Mr. Simuyu finds joy in exploring new places and
-          connecting with nature. He frequently organizes educational trips,
-          where students experience literature and history come alive through
-          cultural visits and outdoor learning.
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Away from academics, Walter loves exploring new destinations and
+          connecting with the world beyond the classroom. Whether it’s a serene
+          countryside escape or a cultural adventure, he finds inspiration in
+          travel — in observing people, nature, and stories that shape life.
         </p>
 
         <p className="text-lg text-gray-700 leading-relaxed">
-          He is also passionate about sports, often seen mentoring learners on
-          teamwork and discipline both on and off the field. His favorite
-          activities include football, hiking, and cross-country runs — all of
-          which he believes nurture resilience and a sense of community.
+          He also enjoys sports as a source of energy and balance. From football
+          to long-distance running and hiking, Walter sees movement as both
+          meditation and motivation — a way to stay focused, disciplined, and
+          grounded.
         </p>
       </motion.div>
 
       {/* SIGNATURE */}
       <motion.div
-        className="text-right italic text-secondary font-medium text-lg mt-10"
+        className="text-right italic text-secondary font-medium text-lg mt-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
