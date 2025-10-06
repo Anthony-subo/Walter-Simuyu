@@ -129,7 +129,7 @@ export default function About() {
               className="rounded-xl overflow-hidden"
             >
               <img
-                src="https://images.unsplash.com/photo-1599058917212-d750089bc07a?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
                 alt="Sports and teamwork"
                 className="w-full h-60 object-cover"
               />
